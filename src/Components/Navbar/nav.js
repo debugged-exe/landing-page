@@ -17,11 +17,6 @@ function nav() {
             <Nav.Link href="#Contact"><span className="NavbarItem">Contact Us</span></Nav.Link>
             <Nav.Link href="#Services"><span className="NavbarItem">Our Services</span></Nav.Link>
           </Nav>
-          <Form inline>
-            <FormControl type="text" placeholder="Search" className="mr-sm-2" />
-            <Button variant="outline-info">Search</Button>
-            </Form>
-            <br />
         </Navbar.Collapse>
       </Navbar>
     </div>);

@@ -2,6 +2,7 @@
 color code : #fa741b orange
 color code : #fbfffd white
 */
+
 .Navbar-color {
   background-color: #15102e;
 }
@@ -16,7 +17,6 @@ color code : #fbfffd white
 }
 .NavbarItem:hover  {
   color: #fa741b;
-  font-size:1.6rem;
 }
 h3,h6{
   text-align:right;
