@@ -1,0 +1,15 @@
+import './App.css';
+import Navbar from './Components/Navbar/nav.js'
+import 'bootstrap/dist/css/bootstrap.min.css';
+import Footer from './Components/Footer/Footer';
+
+function App() {
+  return (
+    <div>
+      <Navbar />
+      <Footer />
+    </div>
+  );
+}
+
+export default App;
