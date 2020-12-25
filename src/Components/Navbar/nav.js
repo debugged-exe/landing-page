@@ -16,7 +16,6 @@ function nav() {
             <Nav.Link href="#About"><span className="NavbarItem">About Us</span></Nav.Link>
             <Nav.Link href="#Contact"><span className="NavbarItem">Contact Us</span></Nav.Link>
             <Nav.Link href="#Services"><span className="NavbarItem">Our Services</span></Nav.Link>
-            <Nav.link href="#home"><span className="NavbarItem">Try this</span></Nav.Link>
           </Nav>
         </Navbar.Collapse>
       </Navbar>
