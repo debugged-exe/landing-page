@@ -1,0 +1,25 @@
+h2{
+    text-align: center;
+    padding: 25px ;
+    margin-bottom: 0;
+    color: #fa741b;
+    text-decoration: underline;
+}
+h5{
+    color: #fa741b;
+}
+.card{
+    width: 70%;
+    min-height: 200px;
+    margin:auto;
+    margin-bottom: 50px;
+    margin-top: 20px;
+    border-radius: 20px;
+    background-color: #15102e;
+    border: solid 2px #fa741b;
+}
+
+.card-text{
+    color: white;
+    margin: 1rem;
+}
