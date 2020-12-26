@@ -13,9 +13,9 @@ function nav() {
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="mr-auto Navbar-text-color">
             <Nav.Link href="#home"><span className="NavbarItem">Home</span></Nav.Link>
-            <Nav.Link href="#About"><span className="NavbarItem">About Us</span></Nav.Link>
-            <Nav.Link href="#Contact"><span className="NavbarItem">Contact Us</span></Nav.Link>
-            <Nav.Link href="#Services"><span className="NavbarItem">Our Services</span></Nav.Link>
+            <Nav.Link href="/#about"><span className="NavbarItem">About Us</span></Nav.Link>
+            <Nav.Link href="/#contact"><span className="NavbarItem">Contact Us</span></Nav.Link>
+            <Nav.Link href="/#ourservices"><span className="NavbarItem">Our Services</span></Nav.Link>
           </Nav>
         </Navbar.Collapse>
       </Navbar>
