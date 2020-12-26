@@ -2,7 +2,7 @@
     margin: 5% 0;
 }
 .parallax{
-    background:rgba(0, 0, 0, 0.4) url('/src/Container/Images/2.jpeg') no-repeat fixed center/cover;
+    background:rgba(0, 0, 0, 0.6) url('/src/Container/Images/2.jpeg') no-repeat fixed center/cover;
     background-blend-mode: darken ;
 }
 
