@@ -8,6 +8,7 @@ const Contact = () => {
     }, []);
     return(
         <div id='contact'>
+            <span id="goto" style = {{marginTop: "-300px", paddingBottom: "300px", display: "block"}}> &nbsp; </span>
             <div data-aos='fade-down' style={{color:'#fa741b'}} className='f2 b tc'>Connect Us At</div>
         <div className='flex justify-around ma3 mb5'>
             <div data-aos='fade-up' className='shadow-4 pa4'>
