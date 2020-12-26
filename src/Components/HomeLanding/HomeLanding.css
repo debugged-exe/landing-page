@@ -1,0 +1,17 @@
+.homeImg{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url('/src/Container/Images/1.jpeg') no-repeat center center/cover;
+    height: 100vh;
+}
+.bg{
+    background-color: #15102c;
+    color: #fa741b;
+}
+
+.form{
+    background: rgba(168, 167, 167,0.4);
+background-size: 40px 60px;
+width: 600px ;
+}
