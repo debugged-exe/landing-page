@@ -83,7 +83,26 @@ const Contact = () => {
           emailFlag===true
           )
         {
-          
+          fetch('http://localhost:3001/contact', {
+            method: 'post',
+            headers: {'Content-Type': 'application/json'},
+            body: JSON.stringify({
+                name: name,
+                email: email,
+                message: reason
+            })
+            })
+            .then(response => response.json())
+            .then(resp => {
+                if(resp==="Success")
+                {
+                    alert("Your message was recieved successfully.")
+                }
+                else
+                {
+                    alert("Unsuccessfull.Please try again.")
+                }
+            })
         }
         else
         {
