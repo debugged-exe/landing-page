@@ -63,12 +63,12 @@ const Contact = () => {
         if(reason==="")
         {
           setReasonFlag(false);
-          setReasonErr("*Reason Field is compulsary.");
+          setReasonErr("*Field is compulsary.");
         }
         else if(reason.length>200 || reason.length<20)
         {
           setReasonFlag(false);
-          setReasonErr("Reason must contain 20-200 characters.");
+          setReasonErr("Message must contain 20-200 characters.");
         }
         else
         {
@@ -145,6 +145,7 @@ const Contact = () => {
                     <p className='f3 b ma0 mt3'>Message :</p>
                     <textarea 
                     type='text'
+                    placeholder='Type Here...'
                     className='w-100'
                     autoComplete = "blej"
                     onChange = {(event) => setReasonField(event)}
@@ -152,7 +153,7 @@ const Contact = () => {
                     <div className="f4 red">{`${reasonErr}`}</div>
                     <input
                     style = {{width: "305px"}}
-                    className="shadow-4 b pv2 input-reset grow pointer dib" 
+                    className="shadow-4 b pv2 input-reset grow pointer dib ma2" 
                     type="submit" 
                     value="Send"
                     onClick = {() => submit()}></input>
