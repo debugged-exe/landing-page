@@ -7,7 +7,7 @@ const Footer = () => {
             <p className="f5 flex justify-around mt3">
                 <span className="dib">©1999 BORA AUTOMOBILES, Inc.</span>
                 <a style={{textDecoration:'none',outline:'none'}} className="link white-80 hover-gray" href="/privacy"> Privacy Policy</a>
-                <a style={{textDecoration:'none',outline:'none'}} className="link white-80 hover-gray" href="#">boraautomobiles99@gmail.com </a>
+                <a style={{textDecoration:'none',outline:'none'}} className="link white-80 hover-gray" href="/#">boraautomobiles99@gmail.com </a>
             </p>
         </footer>
     );
