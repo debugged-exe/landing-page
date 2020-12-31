@@ -120,8 +120,8 @@ const Contact = () => {
         <div id='contact'>
             <span id="goto" style = {{marginTop: "-300px", paddingBottom: "300px", display: "block"}}> &nbsp; </span>
             <div data-aos='fade-down' style={{color:'#fa741b'}} className='f2 b tc'>Connect Us At</div>
-        <div className='flex justify-around ma3 mb5'>
-            <div data-aos='fade-up' className='shadow-4 pa4'>
+        <div className='flex justify-around ma3 mb5 flex-wrap mh4'>
+            <div data-aos='fade-up' className='shadow-4 pa4 ma2'>
                 <div>
                     <p className='f2 b'>Reach Us At</p>
                     <p className='f3 b ma0'>Name :</p>
@@ -158,7 +158,7 @@ const Contact = () => {
                     onClick = {() => submit()}></input>
                 </div>
             </div>
-            <div data-aos='fade-up'>
+            <div data-aos='fade-up' className='mt4'>
                 <p className='f2 ma0 b'>Address</p>
                 <p>NEAR  MRC GODOWN, OPP.</p> 
                 <p>SBI BANK, UBALE NAGAR,</p>
