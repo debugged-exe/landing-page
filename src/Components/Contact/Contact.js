@@ -83,7 +83,7 @@ const Contact = () => {
           emailFlag===true
           )
         {
-          fetch('http://localhost:3001/contact', {
+          fetch('https://rocky-temple-81514.herokuapp.com/contact', {
             method: 'post',
             headers: {'Content-Type': 'application/json'},
             body: JSON.stringify({
@@ -152,8 +152,7 @@ const Contact = () => {
                     onBlur = {() => reasonValidate()}/>
                     <div className="f4 red">{`${reasonErr}`}</div>
                     <input
-                    style = {{width: "305px"}}
-                    className="shadow-4 b pv2 input-reset grow pointer dib ma2" 
+                    className="w-100 shadow-4 b pv2 input-reset grow pointer dib mt3" 
                     type="submit" 
                     value="Send"
                     onClick = {() => submit()}></input>
