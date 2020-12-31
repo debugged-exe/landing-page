@@ -12,6 +12,6 @@
 
 .form{
     background: rgba(168, 167, 167,0.4);
-background-size: 40px 60px;
-width: 600px ;
+    background-size: 40px 60px;
+    width: 100% ;
 }
