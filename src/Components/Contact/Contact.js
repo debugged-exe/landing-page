@@ -98,7 +98,7 @@ const Contact = () => {
         setCaptchaErr("");
       }
   }
-
+  const [sentErr, setSentErr] = useState("");
     
 
     const submit = () => {
@@ -121,6 +121,7 @@ const Contact = () => {
             .then(resp => {
                 if(resp==="Success")
                 {
+                    setSentErr("Message sent successfully")
                     alert("Your message was recieved successfully.")
                     setEmail("")
                     setName("")
@@ -130,6 +131,7 @@ const Contact = () => {
                 else
                 {
                     alert("Unsuccessfull.Please try again.")
+                    setSentErr("Message not sent. Something went wrong")
                 }
             })
         }
@@ -205,6 +207,7 @@ const Contact = () => {
                     type="submit" 
                     value="Send"
                     onClick = {() => submit()}></input>
+                    <div className="f4 green">{`${sentErr}`}</div>
                 </div>
                 
             </div>
