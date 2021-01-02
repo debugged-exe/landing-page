@@ -3,8 +3,7 @@ import {Nav,Navbar} from 'react-bootstrap'
 import './Navbar.css'
 function nav() {
   return (
-    <div >
-      <Navbar fixed="top" variant="dark" className="Navbar-color">
+      <Navbar fixed="top" variant="dark" className="Navbar-color" expand="lg">
         <Navbar.Brand href="#home">
           <h3>Bora Automobiles</h3>
           <h6>Since 1999</h6>
@@ -19,7 +18,7 @@ function nav() {
           </Nav>
         </Navbar.Collapse>
       </Navbar>
-    </div>);
+    );
 }
 
 export default nav;
