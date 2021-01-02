@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import Aos from 'aos';
 import 'aos/dist/aos.css';
+import ReCAPTCHA from "react-google-recaptcha";
+require('dotenv').config()
 
 const Contact = () => {
     const [name, setName] = useState("");
@@ -63,7 +65,7 @@ const Contact = () => {
         if(reason==="")
         {
           setReasonFlag(false);
-          setReasonErr("*Field is compulsary.");
+          setReasonErr("*Field is required.");
         }
         else if(reason.length>200 || reason.length<20)
         {
@@ -77,10 +79,33 @@ const Contact = () => {
         }
     }
 
+    const [captchaFlag, setCaptchaFlag] = useState(false);
+    const [captchaErr, setCaptchaErr] = useState("");
+    const recaptchaRef = React.useRef();
+    const apiKey = process.env.REACT_APP_CAPTCHA_API_KEY;
+
+    const captchaValidate = (event) => {
+      const val = recaptchaRef.current.getValue()
+      if(val==="")
+      {
+        setCaptchaFlag(false);
+        setCaptchaErr("*Please solve the captcha.");
+
+      }
+      else
+      {
+        setCaptchaFlag(true);
+        setCaptchaErr("");
+      }
+  }
+
+    
+
     const submit = () => {
         if(
           nameFlag===true &&
-          emailFlag===true
+          emailFlag===true &&
+          captchaFlag===true
           )
         {
           fetch('https://rocky-temple-81514.herokuapp.com/contact', {
@@ -97,6 +122,10 @@ const Contact = () => {
                 if(resp==="Success")
                 {
                     alert("Your message was recieved successfully.")
+                    setEmail("")
+                    setName("")
+                    setReason("")
+                    recaptchaRef.current.reset()
                 }
                 else
                 {
@@ -109,7 +138,15 @@ const Contact = () => {
           nameValidate();
           emailValidate();
           reasonValidate();
+          captchaValidate();
         }
+    }
+    
+    function onCapChange(value) {
+      if(value!==""){
+        setCaptchaFlag(true)
+        setCaptchaErr("")
+      }
     }
 
 
@@ -131,7 +168,9 @@ const Contact = () => {
                     autoComplete = "blej"
                     onChange = {(event) => setNameField(event)}
                     onBlur = {() => nameValidate()}
-                    placeholder = "Enter your name"/>
+                    placeholder = "Enter your name"
+                    value={name}
+                    />
                     <div className="f4 red">{`${nameErr}`}</div>
                     <p className='f3 b ma0 mt3'>Email :</p>
                     <input 
@@ -140,7 +179,9 @@ const Contact = () => {
                     autoComplete = "blej"
                     onChange = {(event) => setEmailField(event)}
                     onBlur = {() => emailValidate()}
-                    placeholder = "Enter your email"/>
+                    placeholder = "Enter your email"
+                    value={email}  
+                    />
                     <div className="f4 red">{`${emailErr}`}</div>
                     <p className='f3 b ma0 mt3'>Message :</p>
                     <textarea 
@@ -149,14 +190,23 @@ const Contact = () => {
                     className='w-100'
                     autoComplete = "blej"
                     onChange = {(event) => setReasonField(event)}
-                    onBlur = {() => reasonValidate()}/>
+                    onBlur = {() => reasonValidate()}
+                    value={reason}  
+                    />
                     <div className="f4 red">{`${reasonErr}`}</div>
+                    <ReCAPTCHA
+                    ref={recaptchaRef}
+                    sitekey={apiKey}
+                    onChange={onCapChange}
+                    />
+                    <div className="f4 red">{`${captchaErr}`}</div>
                     <input
                     className="w-100 shadow-4 b pv2 input-reset grow pointer dib mt3" 
                     type="submit" 
                     value="Send"
                     onClick = {() => submit()}></input>
                 </div>
+                
             </div>
             <div data-aos='fade-up' className='mt4'>
                 <p className='f2 ma0 b'>Address</p>
