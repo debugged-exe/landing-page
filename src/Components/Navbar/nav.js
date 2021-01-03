@@ -1,6 +1,7 @@
 import React from 'react';
 import {Nav,Navbar} from 'react-bootstrap'
 import './Navbar.css'
+
 function nav() {
   return (
       <Navbar fixed="top" variant="dark" className="Navbar-color" expand="lg">
