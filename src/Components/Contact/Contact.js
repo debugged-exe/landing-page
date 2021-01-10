@@ -105,6 +105,7 @@ const Contact = () => {
         if(
           nameFlag===true &&
           emailFlag===true &&
+          reasonFlag===true&&
           captchaFlag===true
           )
         {
