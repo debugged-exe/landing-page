@@ -10,14 +10,14 @@ function Product() {
         Aos.init({ duration: 2000 });
     }, []);
     return (
-        <section id='ourservices' className='mv3'>
+        <section id='ourservices' className='mv3'  style={{overflow:'hidden'}}>
             <span id="goto" style={{ marginTop: "-300px", paddingBottom: "300px", display: "block" }}> &nbsp; </span>
             <div>
                 <h2 data-aos='fade-down' className='b'>
                     Our Products
                 </h2>
             </div>
-            <div className="row">
+            <div className="row ma2">
                     <div data-aos='fade-right' className="col-sm-6 mb4">
                         <div className="center grow pointer card" style={{backgroundColor:'#15102e'}}>
                             <div className="card-body">
@@ -28,7 +28,7 @@ function Product() {
                             </div>
                         </div>
                 </div>
-                <div data-aos='fade-right' className="col-sm-6">
+                <div data-aos='fade-left' className="col-sm-6">
                     <div className="center grow pointer card" style={{backgroundColor:'#15102e'}}>
                     <Link to="/products" style={{ textDecoration: 'none' }}>
                         <div className="card-body">
