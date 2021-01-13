@@ -1,13 +1,12 @@
-import React, { Component } from 'react';
-import {Modal,Button} from 'react-bootstrap'
+import React from 'react';
 import 'react-multi-carousel/lib/styles.css';
-import { Card, CardDeck, Container, Row } from 'react-bootstrap';
+import { Card, CardDeck, Container} from 'react-bootstrap';
 import Carousel from 'react-multi-carousel';
 
 const responsive = {
 	superLargeDesktop: {
 		// the naming can be any, depends on you.
-		breakpoint: { max: 4000, min: 3000 },
+		breakpoint: { max: 4000, min: 3000 }, 
 		items: 1
 	},
 	desktop: {
@@ -27,7 +26,7 @@ const responsive = {
 const OilCards = () => {
     return ( 
       <Container style={{paddingTop:100,paddingBottom:200}}>
-            
+        <h1 className='bl bw2 pl2'>Oils and Lubricants</h1>    
       <Carousel responsive={responsive}>
               
 <CardDeck>
