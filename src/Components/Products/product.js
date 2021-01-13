@@ -3,6 +3,8 @@ import Aos from 'aos';
 import 'aos/dist/aos.css';
 import { } from 'react-bootstrap';
 import './product.css'
+import { Link } from 'react-router-dom';
+
 function Product() {
     useEffect(() => {
         Aos.init({ duration: 2000 });
@@ -26,14 +28,17 @@ function Product() {
                 </div>
                 <div className="col-sm-6">
                     <div data-aos='fade-left' className="pa2 center grow pointer card">
+                    <Link to="/products" style={{ textDecoration: 'none' }}>
                         <div className="card-body">
                             <h5 className="card-title">LUBRICANTS & OIL</h5>
                             <p className="card-text">
                                 We deal in Castrol, Valvoline, Tata Motors, TVS and other best quality lubricants available in Indian Market.
                     </p>
                         </div>
+                        </Link>
                     </div>
                 </div>
+                
             </div>
         </section>);
 }
