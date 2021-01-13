@@ -1,35 +1,36 @@
-import './App.css';
-import React,{useState} from 'react'
+import React from 'react';
+import { ROUTES } from './routes';
+import { Switch, Route, HashRouter as Router } from 'react-router-dom';
 import Navbar from './Components/Navbar/nav.js'
-import 'bootstrap/dist/css/bootstrap.min.css';
 import Footer from './Components/Footer/Footer';
-import HomeLanding from './Components/HomeLanding/HomeLanding';
-import OurCompany from './Components/OurCompany/OurCompany';
-import Contact from './Components/Contact/Contact';
-import Product from './Components/Products/product';
-import PrivacyPolicy from './Components/Privacy/PrivacyPolicy';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import './App.css'
 
-function App() {
-  const [modalShow, setModalShow] = useState(false);
+class App extends React.Component {
+	getRoutes(routes) {
+		return routes.map(
+			(prop, key) =>
+				prop.path === '/' ? (
+					<Route exact path={prop.path} key={key}>
+						{prop.component}
+					</Route>
+				) : (
+					<Route path={prop.path} key={key}>
+						{prop.component}
+					</Route>
+				)
+		);
+	}
 
-  const showPolicy=()=>{
-    setModalShow(true)
-  }
-
-  return (
-    <div>
-    <PrivacyPolicy
-      show={modalShow}
-      onHide={() => setModalShow(false)}
-    />
-      <Navbar />
-      <HomeLanding/>
-      <Product/>
-      <OurCompany/>
-      <Contact/>
-      <Footer showPolicy={showPolicy}/>
-    </div>
-  );
+	render() {
+		return (
+			<Router basename="/">
+				<Navbar />
+				<Switch>{this.getRoutes(ROUTES)}</Switch>
+        <Footer/>
+			</Router>
+		);
+	}
 }
 
 export default App;
