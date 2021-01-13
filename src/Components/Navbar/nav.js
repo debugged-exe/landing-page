@@ -6,17 +6,19 @@ import { HashLink as Link } from 'react-router-hash-link';
 function nav() {
   return (
       <Navbar fixed="top" variant="dark" className="Navbar-color" expand="lg">
-        <Navbar.Brand to="/">
+        <Navbar.Brand>
+        <Link to='/' style={{ textDecoration: 'none' }}>
           <h3>Bora Automobiles</h3>
           <h6>Since 1999</h6>
+          </Link>
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="mr-auto Navbar-text-color">
-            <Link to='/#home'><span className="NavbarItem">Home</span></Link>
-            <Link to='/#about'><span className="NavbarItem">About Us</span></Link>
-            <Link to="/#contact"><span className="NavbarItem">Contact Us</span></Link>
-            <Link to="/#ourservices"><span className="NavbarItem">Our Services</span></Link>
+            <Link to='/' style={{ textDecoration: 'none' }}><span className="NavbarItem">Home</span></Link>
+            <Link to='/#about' style={{ textDecoration: 'none' }}><span className="NavbarItem">About Us</span></Link>
+            <Link to="/#contact" style={{ textDecoration: 'none' }}><span className="NavbarItem">Contact Us</span></Link>
+            <Link to="/#ourservices" style={{ textDecoration: 'none' }}><span className="NavbarItem">Our Services</span></Link>
           </Nav>
         </Navbar.Collapse>
       </Navbar>
