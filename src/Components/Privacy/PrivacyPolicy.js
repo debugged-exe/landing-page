@@ -1,5 +1,5 @@
-import React, { Component } from 'react';
-import {Modal,Button,Container,Jumbotron} from 'react-bootstrap'
+import React from 'react';
+import {Button,Container,Jumbotron} from 'react-bootstrap'
 
 
 const PrivacyPolicy = () => {
