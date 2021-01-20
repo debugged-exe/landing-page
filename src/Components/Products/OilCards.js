@@ -51,13 +51,11 @@ const responsive = {
 };
 
 const OilCards = () => {
-  const head=['Engine Oil','Gear, Brake and Steering Oils'];
   var enginePic =[img1,img2,img3,img4,img5,img6,img7,img8,img9,img10]
   var engineDets = [{brand:'Valvoline',price:200,qty:10},{brand:'Valvoline',price:200,qty:10},{brand:'Luberox',price:200,qty:10},{brand:'Valvoline',price:150,qty:10},{brand:'Luberox',price:20,qty:10},{brand:'Luberox',price:20,qty:10},{brand:'Luberox',price:20,qty:10},{brand:'Luberox',price:20,qty:10},{brand:'Luberox',price:20,qty:10},{brand:'Luberox',price:20,qty:10}]
   var gearPic = [oil1,oil2,oil3]
   var gearDets = [{brand:'Valvoline',price:20,qty:10},{brand:'Tata',price:20,qty:10},{brand:'Luberox',price:20,qty:10}]
   var greasePic = [grease1,grease2,grease3,grease4,grease5,grease6,grease7,grease8,grease9,grease10,grease11]
-  const temp=[enginePic,gearPic]
 
     let n = 4;
 		let result = new Array(Math.ceil(enginePic.length / n)).fill().map((_) => enginePic.splice(0, n));
