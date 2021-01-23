@@ -19,7 +19,7 @@ function Product() {
             </div>
             <div className="row ma2">
                     <div data-aos='fade-right' className="col-sm-6 mb4">
-                        <div className="center grow pointer card" style={{backgroundColor:'#15102e'}}>
+                        <div className="center grow pointer cardX" style={{backgroundColor:'#15102e'}}>
                             <div className="card-body">
                                 <h5 className="card-title">HCV & LCV SPARES</h5>
                                 <p className="card-text">
@@ -29,7 +29,7 @@ function Product() {
                         </div>
                 </div>
                 <div data-aos='fade-left' className="col-sm-6">
-                    <div className="center grow pointer card" style={{backgroundColor:'#15102e'}}>
+                    <div className="center grow pointer cardX" style={{backgroundColor:'#15102e'}}>
                     <Link to="/products" style={{ textDecoration: 'none' }}>
                         <div className="card-body">
                             <h5 className="card-title">LUBRICANTS & OIL</h5>
