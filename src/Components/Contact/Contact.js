@@ -164,7 +164,7 @@ const Contact = () => {
             <div data-aos='fade-up' className='shadow-4 pa3 ma2'>
                 <div>
                     <p className='f2 b'>Reach Us At</p>
-                    <p className='f3 b ma0'>Name :</p>
+                    <p className='f3 b ma0'>Company Name :</p>
                     <input 
                     type='text' 
                     className='pr6 pv1' 
@@ -186,7 +186,7 @@ const Contact = () => {
                     value={email}  
                     />
                     <div className="f4 red">{`${emailErr}`}</div>
-                    <p className='f3 b ma0 mt3'>Message :</p>
+                    <p className='f3 b ma0 mt3'>Requirements :</p>
                     <textarea 
                     type='text'
                     placeholder='Type Here...'
