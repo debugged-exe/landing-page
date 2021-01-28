@@ -1,0 +1,6 @@
+.widgets{
+    position: fixed;
+    bottom: 40%;
+    right: 0px;
+    z-index: 100;
+}
