@@ -10,7 +10,7 @@ function nav() {
         <Link to='/' style={{ textDecoration: 'none' }}>
           <h3>Bora Automobiles</h3>
           <h6>Since 1999</h6>
-          </Link>
+        </Link>
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
