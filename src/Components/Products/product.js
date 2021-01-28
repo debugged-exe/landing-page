@@ -25,7 +25,7 @@ function Product() {
                                 <p className="card-text tc">
                                     We deal in all types of original spares in Tata, Eicher, Leyland, AMW, Bharat Benz, Mahindra Navi-star and other LCV's & HCV's running in India.
                                 </p>
-                                <Link to="/products" style={{ textDecoration: 'none',backgroundColor:'#fa741b', color:'white'}} className='br2 b pa2 grow'>
+                                <Link to="/spares" style={{ textDecoration: 'none',backgroundColor:'#fa741b', color:'white'}} className='br2 b pa2 grow'>
                                 View All Products
                                 </Link>
                             </div>
