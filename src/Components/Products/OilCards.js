@@ -52,12 +52,16 @@ const responsive = {
 };
 
 const OilCards = () => {
-  var enginePic =[img1,img4,img3,img5,img6,img7,img8,img10]
+  var enginePic =[img1,img4,img3,img5,img6]
   var engineDets = [{brand:'Valvoline',price:200,qty:10},{brand:'Valvoline E700',price:200,qty:10},{brand:'Valvoline',price:200,qty:10},{brand:'Valvoline',price:150,qty:10},{brand:'Pro 4T 20W40',price:20,qty:10},{brand:'Tata 15W 40',price:20,qty:10},{brand:'Gulf 15W 40',price:20,qty:10},{brand:'Luberox 15W 40',price:20,qty:10},{brand:'Luberox',price:20,qty:10},{brand:'Luberox',price:20,qty:10}]
+  var luberoxEngine = [img10]
+  var gulfEngine = [img8]
+  var tataEngine = [img7]
   var gearPic = [oil1,oil2,oil3]
   var gearDets = [{brand:'Valvoline',price:20,qty:10},{brand:'Tata',price:20,qty:10},{brand:'Luberox',price:20,qty:10}]
-  var greasePic = [grease1,grease2,grease3,grease4,grease5,grease6]
-  var greaseDets = [{brand:'Gulf/Imperial'},{brand:'Tata/Vericol'},{brand:'AdBlue PSF1'},{brand:'Tata'},{brand:'Gulf'},{brand:'Gulf'}]
+  var greasePic = [grease1,grease3,grease5,grease6]
+  var greaseDets = [{brand:'Gulf/Imperial'},{brand:'AdBlue PSF1'},{brand:'Gulf'},{brand:'Gulf'}]
+  var tataGrease = [grease2,grease4]
 
     let n = 4;
 		let result = new Array(Math.ceil(enginePic.length / n)).fill().map((_) => enginePic.splice(0, n));
@@ -69,6 +73,34 @@ const OilCards = () => {
     enginePic = result;
 
     n = 4;
+		result = new Array(Math.ceil(gulfEngine.length / n)).fill().map((_) => gulfEngine.splice(0, n));
+		if (result[result.length - 1] !== undefined) {
+			while (result[result.length - 1].length < n) {
+				result[result.length - 1].push('N');
+			}
+    }
+    gulfEngine = result;
+
+
+    n = 4;
+		result = new Array(Math.ceil(tataGrease.length / n)).fill().map((_) => tataGrease.splice(0, n));
+		if (result[result.length - 1] !== undefined) {
+			while (result[result.length - 1].length < n) {
+				result[result.length - 1].push('N');
+			}
+    }
+    tataGrease = result;
+
+    n = 4;
+		result = new Array(Math.ceil(tataEngine.length / n)).fill().map((_) => tataEngine.splice(0, n));
+		if (result[result.length - 1] !== undefined) {
+			while (result[result.length - 1].length < n) {
+				result[result.length - 1].push('N');
+			}
+    }
+    tataEngine = result;
+
+    n = 4;
 		result = new Array(Math.ceil(gearPic.length / n)).fill().map((_) => gearPic.splice(0, n));
 		if (result[result.length - 1] !== undefined) {
 			while (result[result.length - 1].length < n) {
@@ -76,6 +108,15 @@ const OilCards = () => {
 			}
     }
     gearPic = result;
+    
+    n = 4;
+		result = new Array(Math.ceil(luberoxEngine.length / n)).fill().map((_) => luberoxEngine.splice(0, n));
+		if (result[result.length - 1] !== undefined) {
+			while (result[result.length - 1].length < n) {
+				result[result.length - 1].push('N');
+			}
+    }
+    luberoxEngine = result;
 
     n = 4;
 		result = new Array(Math.ceil(greasePic.length / n)).fill().map((_) => greasePic.splice(0, n));
@@ -91,7 +132,68 @@ const OilCards = () => {
     return ( 
       <>
       <Container style={{paddingTop:100}}>
-        <h1 className='bl bw2 pl2' style={{borderLeftColor:'#fa741b'}}>Engine Oil</h1>    
+        <h1 className='bl bw2 pl2' style={{borderLeftColor:'#fa741b',fontWeight:'bold'}}>ENGINE OIL</h1>    
+      
+        <h1 className='bl bw2 pl2  mt-5' style={{borderLeftColor:'#fa741b'}}>Tata</h1>    
+        <Carousel responsive={responsive}>
+      { tataEngine.map((urls, i) => (    
+<CardDeck key={i}>
+  {urls.map((url,index)=>
+    url === 'N' ? (
+			<Card key={index} style={{ opacity: 0 }} />
+									) :
+  (
+    <Card key={index}>
+    <Card.Img variant="top" src={url} height='300'/>
+
+  </Card>
+  
+  ))}
+</CardDeck>
+))}
+</Carousel>
+        
+        <h1 className='bl bw2 pl2  mt-5' style={{borderLeftColor:'#fa741b'}}>Luberox</h1>    
+        <Carousel responsive={responsive}>
+      { luberoxEngine.map((urls, i) => (    
+<CardDeck key={i}>
+  {urls.map((url,index)=>
+    url === 'N' ? (
+			<Card key={index} style={{ opacity: 0 }} />
+									) :
+  (
+    <Card key={index}>
+    <Card.Img variant="top" src={url} height='300'/>
+
+  </Card>
+  
+  ))}
+</CardDeck>
+))}
+</Carousel>
+
+<h1 className='bl bw2 pl2  mt-5' style={{borderLeftColor:'#fa741b'}}>Gulf</h1>    
+<Carousel responsive={responsive}>
+      { gulfEngine.map((urls, i) => (    
+<CardDeck key={i}>
+  {urls.map((url,index)=>
+    url === 'N' ? (
+			<Card key={index} style={{ opacity: 0 }} />
+									) :
+  (
+    <Card key={index}>
+    <Card.Img variant="top" src={url} height='300'/>
+
+  </Card>
+  
+  ))}
+</CardDeck>
+))}
+</Carousel>
+      
+
+      <h1 className='bl bw2 pl2 mt-5' style={{borderLeftColor:'#fa741b'}}>Valvoline</h1>    
+
       <Carousel responsive={responsive}>
       { enginePic.map((urls, i) => (    
 <CardDeck key={i}>
@@ -125,7 +227,7 @@ const OilCards = () => {
 </Container>
 
 <Container style={{paddingTop:50}}>
-        <h1 className='bl bw2 pl2' style={{borderLeftColor:'#fa741b'}}>Gear, Brake and Steering Oils</h1>    
+<h1 className='bl bw2 pl2' style={{borderLeftColor:'#fa741b',fontWeight:'bold'}}>GEAR, BRAKE AND STEERING OILS</h1>    
         <Car>
   <Car.Item>
     <img
@@ -172,7 +274,28 @@ const OilCards = () => {
 </Container>
 
 <Container style={{paddingTop:50}}>
-        <h1 className='bl bw2 pl2' style={{borderLeftColor:'#fa741b'}}>Grease, Lubricants and Coolants</h1>    
+<h1 className='bl bw2 pl2' style={{borderLeftColor:'#fa741b',fontWeight:'bold'}}>GREASE, LUBRICANTS AND COOLANTS</h1>   
+
+        <h1 className='bl bw2 pl2  mt-5' style={{borderLeftColor:'#fa741b'}}>Tata</h1>    
+<Carousel responsive={responsive}>
+      { tataGrease.map((urls, i) => (    
+<CardDeck key={i}>
+  {urls.map((url,index)=>
+    url === 'N' ? (
+			<Card key={index} style={{ opacity: 0 }} />
+									) :
+  (
+    <Card key={index}>
+    <Card.Img variant="top" src={url} height='300'/>
+
+  </Card>
+  
+  ))}
+</CardDeck>
+))}
+</Carousel>
+
+<h1 className='bl bw2 pl2  mt-5' style={{borderLeftColor:'#fa741b'}}>Gulf</h1>    
       <Carousel responsive={responsive}>
       { greasePic.map((urls, i) => (    
 <CardDeck key={i}>
