@@ -1,8 +1,12 @@
-import React from 'react';
+import React,{useState} from 'react';
+import 'tachyons';
+import './Oilcard.css';
 import 'react-multi-carousel/lib/styles.css';
 import { Card, CardDeck, Container, Row,Col} from 'react-bootstrap';
 import {Carousel as Car} from 'react-bootstrap';
-import Carousel from 'react-multi-carousel';
+import Carousel from 'react-elastic-carousel'
+import {gearPic}  from './oilnames';
+import {tataEngineOil}  from './oilnames';
 import img1 from '../../Container/Images/engineOil/img1.jpeg'
 import img2 from '../../Container/Images/engineOil/img2.jpeg'
 import img3 from '../../Container/Images/engineOil/img3.jpeg'
@@ -14,27 +18,17 @@ import img8 from '../../Container/Images/engineOil/img8.jpeg'
 import img9 from '../../Container/Images/engineOil/img9.jpeg'
 import img10 from '../../Container/Images/engineOil/img10.jpeg'
 
-import oil2 from '../../Container/Images/gearOil/oil2.jpeg'
-import oil1 from '../../Container/Images/gearOil/oil1.jpeg'
-import oil3 from '../../Container/Images/gearOil/oil3.jpeg'
-
 import grease1 from '../../Container/Images/grease/grease1.jpeg'
 import grease2 from '../../Container/Images/grease/grease2.jpeg'
-// import grease3 from '../../Container/Images/grease/grease3.jpeg'
 import grease3 from '../../Container/Images/grease/grease4.jpeg'
-// import grease5 from '../../Container/Images/grease/grease5.jpeg'
-// import grease6 from '../../Container/Images/grease/grease6.jpeg'
-// import grease7 from '../../Container/Images/grease/grease7.jpeg'
-import grease4 from '../../Container/Images/grease/grease8.jpeg'
 import grease5 from '../../Container/Images/grease/grease9.jpeg'
 import grease6 from '../../Container/Images/grease/grease10.jpeg'
-// import grease11 from '../../Container/Images/grease/grease11.jpeg'
 
 
 const responsive = {
 	superLargeDesktop: {
 		// the naming can be any, depends on you.
-		breakpoint: { max: 4000, min: 3000 }, 
+		breakpoint: { max: 4000, min: 3000 },
 		items: 1
 	},
 	desktop: {
@@ -52,35 +46,119 @@ const responsive = {
 };
 
 const OilCards = () => {
-  var enginePic =[img1,img4,img3,img5,img6]
-  var engineDets = [{brand:'Valvoline',price:200,qty:10},{brand:'Valvoline E700',price:200,qty:10},{brand:'Valvoline',price:200,qty:10},{brand:'Valvoline',price:150,qty:10},{brand:'Pro 4T 20W40',price:20,qty:10},{brand:'Tata 15W 40',price:20,qty:10},{brand:'Gulf 15W 40',price:20,qty:10},{brand:'Luberox 15W 40',price:20,qty:10},{brand:'Luberox',price:20,qty:10},{brand:'Luberox',price:20,qty:10}]
-  var luberoxEngine = [img10]
-  var gulfEngine = [img8]
-  var tataEngine = [img7]
-  var gearPic = [oil1,oil2,oil3]
-  var gearDets = [{brand:'Valvoline',price:20,qty:10},{brand:'Tata',price:20,qty:10},{brand:'Luberox',price:20,qty:10}]
-  var greasePic = [grease1,grease3,grease5,grease6]
-  var greaseDets = [{brand:'Gulf/Imperial'},{brand:'AdBlue PSF1'},{brand:'Gulf'},{brand:'Gulf'}]
-  var tataGrease = [grease2,grease4]
+
+	const [gear,setGear]=useState(gearPic);
+
+  var tataEngineOil=[
+		{image:img1,name:'CH-4'},
+		{image:img2,name:'CF-4'},
+		{image:img3,name:'CI-4+'},
+		{image:img5,name:'Tata4'},
+		{image:img6,name:'Tata5'}
+	]
+
+	var luberoxEngineOil = [
+		{image:img10,name:'CH-4'},
+		{image:img8,name:'CF-4'},
+		{image:img6,name:'CI-4+'}
+	]
+	var castrolEngineOil = [
+		{image:img1,name:'CH-4'},
+		{image:img4,name:'CF-4'},
+		{image:img8,name:'CI-4+'}
+	]
+
+	var pro4TEngineOil = [
+		{image:img5,name:'20w40'}
+	]
+
+var gulfEngineOil =
+[
+		{image:img10,name:'Gulf1'},
+		{image:img8,name:'Gulf2'},
+		{image:img6,name:'Gulf3'},
+		{image:img7,name:'Gulf4'},
+		{image:img2,name:'Gulf5'}
+]
+
+
+var valvolineEngineOil=[
+		{image:img1,name:'valvoline1'},
+		{image:img4,name:'valvoline2'},
+		{image:img6,name:'valvoline3'},
+		{image:img8,name:'valvoline4'},
+		{image:img2,name:'valvoline5'}
+]
+  var tataGrease = [
+		{image:grease1,name:'tataGrease1'},
+		{image:grease3,name:'tataGrease2'},
+		{image:grease6,name:'tataGrease3'},
+		{image:grease5,name:'tataGrease4'},
+		{image:grease2,name:'tataGrease5'}
+	]
+
+var gulfGrease=[
+	{image:grease3,name:'GulfGrease1'},
+	{image:grease6,name:'GulfGrease2'},
+	{image:grease2,name:'GulfGrease3'},
+	{image:grease5,name:'GulfGrease4'},
+	{image:grease1,name:'GulfGrease5'}
+
+]
 
     let n = 4;
-		let result = new Array(Math.ceil(enginePic.length / n)).fill().map((_) => enginePic.splice(0, n));
+
+		let result = new Array(Math.ceil(tataEngineOil.length / n)).fill().map((_) => tataEngineOil.splice(0, n));
+		if (result[result.length - 1] !== undefined) {
+			while (result[result.length - 1].length < n) {
+				result[result.length - 1].push('N');
+			}
+		}
+		tataEngineOil = result;
+
+		n = 4;
+		result = new Array(Math.ceil(luberoxEngineOil.length / n)).fill().map((_) => luberoxEngineOil.splice(0, n));
+		if (result[result.length - 1] !== undefined) {
+			while (result[result.length - 1].length < n) {
+				result[result.length - 1].push('N');
+			}
+		}
+		luberoxEngineOil = result;
+		n = 4;
+		result = new Array(Math.ceil(castrolEngineOil.length / n)).fill().map((_) =>castrolEngineOil.splice(0, n));
+		if (result[result.length - 1] !== undefined) {
+			while (result[result.length - 1].length < n) {
+				result[result.length - 1].push('N');
+			}
+		}
+		castrolEngineOil = result;
+
+		n = 4;
+		result = new Array(Math.ceil(pro4TEngineOil.length / n)).fill().map((_) => pro4TEngineOil.splice(0, n));
+		if (result[result.length - 1] !== undefined) {
+			while (result[result.length - 1].length < n) {
+				result[result.length - 1].push('N');
+			}
+		}
+		pro4TEngineOil = result;
+
+
+		n = 4;
+ 	 result = new Array(Math.ceil(gulfEngineOil.length / n)).fill().map((_) => gulfEngineOil.splice(0, n));
+ 	 if (result[result.length - 1] !== undefined) {
+ 		 while (result[result.length - 1].length < n) {
+ 			 result[result.length - 1].push('N');
+ 		 }
+ 	 }
+ 	 gulfEngineOil = result;
+
+		 result = new Array(Math.ceil(valvolineEngineOil.length / n)).fill().map((_) =>valvolineEngineOil.splice(0, n));
 		if (result[result.length - 1] !== undefined) {
 			while (result[result.length - 1].length < n) {
 				result[result.length - 1].push('N');
 			}
     }
-    enginePic = result;
-
-    n = 4;
-		result = new Array(Math.ceil(gulfEngine.length / n)).fill().map((_) => gulfEngine.splice(0, n));
-		if (result[result.length - 1] !== undefined) {
-			while (result[result.length - 1].length < n) {
-				result[result.length - 1].push('N');
-			}
-    }
-    gulfEngine = result;
-
+    valvolineEngineOil = result;
 
     n = 4;
 		result = new Array(Math.ceil(tataGrease.length / n)).fill().map((_) => tataGrease.splice(0, n));
@@ -92,89 +170,93 @@ const OilCards = () => {
     tataGrease = result;
 
     n = 4;
-		result = new Array(Math.ceil(tataEngine.length / n)).fill().map((_) => tataEngine.splice(0, n));
+		result = new Array(Math.ceil(gulfGrease.length / n)).fill().map((_) => gulfGrease.splice(0, n));
 		if (result[result.length - 1] !== undefined) {
 			while (result[result.length - 1].length < n) {
 				result[result.length - 1].push('N');
 			}
     }
-    tataEngine = result;
+    gulfGrease = result;
 
-    n = 4;
-		result = new Array(Math.ceil(gearPic.length / n)).fill().map((_) => gearPic.splice(0, n));
-		if (result[result.length - 1] !== undefined) {
-			while (result[result.length - 1].length < n) {
-				result[result.length - 1].push('N');
-			}
-    }
-    gearPic = result;
-    
-    n = 4;
-		result = new Array(Math.ceil(luberoxEngine.length / n)).fill().map((_) => luberoxEngine.splice(0, n));
-		if (result[result.length - 1] !== undefined) {
-			while (result[result.length - 1].length < n) {
-				result[result.length - 1].push('N');
-			}
-    }
-    luberoxEngine = result;
-
-    n = 4;
-		result = new Array(Math.ceil(greasePic.length / n)).fill().map((_) => greasePic.splice(0, n));
-		if (result[result.length - 1] !== undefined) {
-			while (result[result.length - 1].length < n) {
-				result[result.length - 1].push('N');
-			}
-    }
-    greasePic = result;
-
-    let ik = 0;
-    let ip = 0;
-    return ( 
+    return (
       <>
       <Container style={{paddingTop:100}}>
-        <h1 className='bl bw2 pl2' style={{borderLeftColor:'#fa741b',fontWeight:'bold'}}>ENGINE OIL</h1>    
-      
-        <h1 className='bl bw2 pl2  mt-5' style={{borderLeftColor:'#fa741b'}}>Tata</h1>    
-        <Carousel responsive={responsive}>
-      { tataEngine.map((urls, i) => (    
-<CardDeck key={i}>
-  {urls.map((url,index)=>
-    url === 'N' ? (
-			<Card key={index} style={{ opacity: 0 }} />
-									) :
-  (
-    <Card key={index}>
-    <Card.Img variant="top" src={url} height='300'/>
+        <h1 className='bl bw2 pl2' style={{borderLeftColor:'#fa741b',fontWeight:'bold'}}>ENGINE OIL</h1>
 
-  </Card>
-  
-  ))}
-</CardDeck>
-))}
-</Carousel>
-        
-        <h1 className='bl bw2 pl2  mt-5' style={{borderLeftColor:'#fa741b'}}>Luberox</h1>    
-        <Carousel responsive={responsive}>
-      { luberoxEngine.map((urls, i) => (    
-<CardDeck key={i}>
-  {urls.map((url,index)=>
-    url === 'N' ? (
-			<Card key={index} style={{ opacity: 0 }} />
-									) :
-  (
-    <Card key={index}>
-    <Card.Img variant="top" src={url} height='300'/>
 
-  </Card>
-  
-  ))}
-</CardDeck>
-))}
-</Carousel>
+				<h1 className='bl bw2 pl2  mt-5' style={{borderLeftColor:'#fa741b'}}>Tata</h1>
+					<Carousel responsive={responsive}>
+					{ tataEngineOil.map((urls, i) => (
+						<CardDeck key={i}>
+							{urls.map((url,index)=>
+								url === 'N' ? (
+									<Card key={index} style={{ opacity: 0 }} />
+															) :
+							(
+								<Card key={index}>
+								<Card.Img variant="top" src={url.image} height='300'/>
+								<Card.Body>
+								<Container>
+									<Row><h4>{url.name}</h4></Row>
+								</Container>
+								</Card.Body>
+							</Card>
 
-<h1 className='bl bw2 pl2  mt-5' style={{borderLeftColor:'#fa741b'}}>Gulf</h1>    
+							))}
+						</CardDeck>
+						))}
+						</Carousel>
+
+    <h1 className='bl bw2 pl2  mt-5' style={{borderLeftColor:'#fa741b'}}>Luberox</h1>
+      <Carousel responsive={responsive}>
+      { luberoxEngineOil.map((urls, i) => (
+				<CardDeck key={i}>
+				  {urls.map((url,index)=>
+				    url === 'N' ? (
+							<Card key={index} style={{ opacity: 0 }} />
+													) :
+				  (
+				    <Card key={index}>
+				    <Card.Img variant="top" src={url.image} height='300'/>
+						<Card.Body>
+				    <Container>
+				      <Row><h4>{url.name}</h4></Row>
+				    </Container>
+				    </Card.Body>
+				  </Card>
+
+				  ))}
+				</CardDeck>
+				))}
+				</Carousel>
+
+
+				<h1 className='bl bw2 pl2  mt-5' style={{borderLeftColor:'#fa741b'}}>Castrol</h1>
+		      <Carousel responsive={responsive}>
+		      { castrolEngineOil.map((urls, i) => (
+						<CardDeck key={i}>
+						  {urls.map((url,index)=>
+						    url === 'N' ? (
+									<Card key={index} style={{ opacity: 0 }} />
+															) :
+						  (
+						    <Card key={index}>
+						    <Card.Img variant="top" src={url.image} height='300'/>
+								<Card.Body>
+						    <Container>
+						      <Row><h4>{url.name}</h4></Row>
+						    </Container>
+						    </Card.Body>
+						  </Card>
+
+						  ))}
+						</CardDeck>
+						))}
+						</Carousel>
+
+<h1 className='bl bw2 pl2  mt-5' style={{borderLeftColor:'#fa741b'}}>Gulf</h1>
 <Carousel responsive={responsive}>
-      { gulfEngine.map((urls, i) => (    
+      { gulfEngineOil.map((urls, i) => (
 <CardDeck key={i}>
   {urls.map((url,index)=>
     url === 'N' ? (
@@ -182,20 +264,24 @@ const OilCards = () => {
 									) :
   (
     <Card key={index}>
-    <Card.Img variant="top" src={url} height='300'/>
-
+    <Card.Img variant="top" src={url.image} height='300'/>
+		<Card.Body>
+		<Container>
+			<Row><h4>{url.name}</h4></Row>
+		</Container>
+		</Card.Body>
   </Card>
-  
+
   ))}
 </CardDeck>
 ))}
 </Carousel>
-      
 
-      <h1 className='bl bw2 pl2 mt-5' style={{borderLeftColor:'#fa741b'}}>Valvoline</h1>    
+
+      <h1 className='bl bw2 pl2 mt-5' style={{borderLeftColor:'#fa741b'}}>Valvoline</h1>
 
       <Carousel responsive={responsive}>
-      { enginePic.map((urls, i) => (    
+      { valvolineEngineOil.map((urls, i) => (
 <CardDeck key={i}>
   {urls.map((url,index)=>
     url === 'N' ? (
@@ -203,82 +289,67 @@ const OilCards = () => {
 									) :
   (
     <Card key={index}>
-    <Card.Img variant="top" src={url} height='300'/>
+    <Card.Img variant="top" src={url.image} height='300'/>
     <Card.Body>
     <Container>
-      <Row><h4>{engineDets[ik++].brand}</h4></Row>
+      <Row><h4>{url.name}</h4></Row>
     </Container>
     </Card.Body>
-    {/* <Card.Footer>
-    <Container fluid>
-      <Row className="justify-content-center">
-        <Col><i>Cost: ₹{engineDets[index].price}</i></Col>
-        <Col>Qty: {engineDets[index].qty}</Col>
-      </Row>
-    </Container>
-  </Card.Footer> */}
-
   </Card>
-  
+
   ))}
 </CardDeck>
 ))}
 </Carousel>
+
+<h1 className='bl bw2 pl2  mt-5' style={{borderLeftColor:'#fa741b'}}>Pro 4T</h1>
+	<Carousel responsive={responsive}>
+	{ pro4TEngineOil.map((urls, i) => (
+		<CardDeck key={i}>
+			{urls.map((url,index)=>
+				url === 'N' ? (
+					<Card key={index} style={{ opacity: 0 }} />
+											) :
+			(
+				<Card key={index}>
+				<Card.Img variant="top" src={url.image} height='300'/>
+				<Card.Body>
+				<Container>
+					<Row><h4>{url.name}</h4></Row>
+				</Container>
+				</Card.Body>
+			</Card>
+
+			))}
+		</CardDeck>
+		))}
+		</Carousel>
 </Container>
 
 <Container style={{paddingTop:50}}>
-<h1 className='bl bw2 pl2' style={{borderLeftColor:'#fa741b',fontWeight:'bold'}}>GEAR, BRAKE AND STEERING OILS</h1>    
-        <Car>
-  <Car.Item>
-    <img
-      className="d-block w-100"
-      src={oil1}
-      alt="First slide"
-      height='600'
-      width='auto'
-    />
-    {/* <Car.Caption>
-      <h3>First slide label</h3>
-      <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-    </Car.Caption> */}
-  </Car.Item>
-  <Car.Item>
-    <img
-      className="d-block w-100"
-      src={oil2}
-      alt="Third slide"
-      height='600'
-      width='300'
-    />
-
-    {/* <Car.Caption>
-      <h3>Second slide label</h3>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-    </Car.Caption> */}
-  </Car.Item>
-  <Car.Item>
-    <img
-      className="d-block w-100"
-      src={oil3}
-      alt="Third slide"
-      height='600'
-      width='300'
-    />
-
-    {/* <Car.Caption>
-      <h3>Third slide label</h3>
-      <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
-    </Car.Caption> */}
-  </Car.Item>
-</Car>
+<h1 className='bl bw2 pl2' style={{borderLeftColor:'#fa741b',fontWeight:'bold'}}>GEAR, BRAKE AND STEERING OILS</h1>
+      <Carousel >{
+                gear.map((data)=>
+                  (
+                   <div className="main">
+											    <img src={data.img} className="imgsize" alt="oil pic"  height='400px ' width='400px' style={{marginLeft:'10%'}}/>
+													<div className="flex flex-column items-center mainin" >
+			                        <h3 className="tc f2"> {data.title.toUpperCase()}</h3>
+			                        <p className="fw5 tc des">{data.description}</p>
+			                    </div>
+									 </div>
+                  )
+                )
+              }
+        </Carousel>
 </Container>
 
 <Container style={{paddingTop:50}}>
-<h1 className='bl bw2 pl2' style={{borderLeftColor:'#fa741b',fontWeight:'bold'}}>GREASE, LUBRICANTS AND COOLANTS</h1>   
+<h1 className='bl bw2 pl2' style={{borderLeftColor:'#fa741b',fontWeight:'bold'}}>GREASE, LUBRICANTS AND COOLANTS</h1>
 
-        <h1 className='bl bw2 pl2  mt-5' style={{borderLeftColor:'#fa741b'}}>Tata</h1>    
+<h1 className='bl bw2 pl2  mt-5' style={{borderLeftColor:'#fa741b'}}>Tata</h1>
 <Carousel responsive={responsive}>
-      { tataGrease.map((urls, i) => (    
+      { tataGrease.map((urls, i) => (
 <CardDeck key={i}>
   {urls.map((url,index)=>
     url === 'N' ? (
@@ -286,18 +357,22 @@ const OilCards = () => {
 									) :
   (
     <Card key={index}>
-    <Card.Img variant="top" src={url} height='300'/>
-
+    <Card.Img variant="top" src={url.image} height='300'/>
+		<Card.Body>
+ 	 <Container>
+ 		 <Row><h4>{url.name}</h4></Row>
+ 	 </Container>
+ 	 </Card.Body>
   </Card>
-  
+
   ))}
 </CardDeck>
 ))}
 </Carousel>
 
-<h1 className='bl bw2 pl2  mt-5' style={{borderLeftColor:'#fa741b'}}>Gulf</h1>    
+<h1 className='bl bw2 pl2  mt-5' style={{borderLeftColor:'#fa741b'}}>Gulf</h1>
       <Carousel responsive={responsive}>
-      { greasePic.map((urls, i) => (    
+      { gulfGrease.map((urls, i) => (
 <CardDeck key={i}>
   {urls.map((url,index)=>
     url === 'N' ? (
@@ -305,31 +380,21 @@ const OilCards = () => {
 									) :
   (
   <Card key={index}>
-    <Card.Img variant="top" src={url} height='300'/>
+    <Card.Img variant="top" src={url.image} height='300'/>
     <Card.Body>
     <Container>
-      <Row><h4>{greaseDets[ip++].brand}</h4></Row>
+      <Row><h4>{url.name}</h4></Row>
     </Container>
     </Card.Body>
-    {/* <Card.Footer>
-    <Container fluid>
-      <Row className="justify-content-center">
-        something
-      </Row>
-    </Container>
-  </Card.Footer> */}
-
   </Card>
-  
+
   ))}
 </CardDeck>
 ))}
 </Carousel>
 </Container>
 </>
-
-
 );
 }
- 
+
 export default OilCards;

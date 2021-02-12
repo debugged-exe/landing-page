@@ -1,0 +1,29 @@
+.main{
+  display: flex;
+  justify-content: space-around;
+}
+.des{
+  font-size:1.3rem;
+}
+.mainin{
+  padding: 5%;
+}
+
+@media only screen
+   and (max-width : 490px) {
+.main{
+  display: block;
+}
+
+.imgsize{
+  width:80vw;
+  height:70vw;
+}
+.des{
+  font-size:4.5vw;
+}
+.mainin{
+  padding:0px;
+  width: 100%;
+}
+}
