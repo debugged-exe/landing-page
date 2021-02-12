@@ -10,7 +10,6 @@ const Footer = () => {
     return (
         <div>
             <span className='flex widgets justify-center items-center'>
-                <p><IoIosArrowDropleftCircle size='1.7rem'/></p>
                 <p className='flex flex-column justiy-between items-end bg-white shadow-2 br4 pa2'>
                     <a className='mb2' href='https://wa.me/919325521117'><ImWhatsapp color = 'green' size = '2.2rem'/></a>
                     <a href='mailto:boraautomobiles99@gmail.com'><SiGmail  color = 'tomato' size = '2.2rem'/></a>
