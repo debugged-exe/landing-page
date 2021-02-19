@@ -1,32 +1,48 @@
-import oil2 from '../../Container/Images/gearOil/oil2.jpeg'
-import oil1 from '../../Container/Images/gearOil/oil1.jpeg'
-import oil3 from '../../Container/Images/gearOil/oil3.jpeg'
+import img3 from '../../Container/Images/engineOil/img3.jpeg'
+import img4 from '../../Container/Images/engineOil/img4.jpeg'
+import img5 from '../../Container/Images/engineOil/img5.jpeg'
+import img6 from '../../Container/Images/engineOil/img6.jpeg'
+import img7 from '../../Container/Images/engineOil/img7.jpeg'
+import img8 from '../../Container/Images/engineOil/img8.jpeg'
+import img9 from '../../Container/Images/engineOil/img9.jpeg'
+import img10 from '../../Container/Images/engineOil/img10.jpeg'
 
 
-  export const gearPic = [
+  export const ProdutsContent = [
   {
-  img:oil1,
-  title:"Brake0",
-  description:"Nulla vitae elit libero, a pharetra augue mollis interdum.Hello hi tata byee. see you soon or never again hahahhaha. HEHHEHEHEHH HOOOOOO SANTAAAA COMINGGG.HEHHEHEHEHH HOOOOOO SANTAAAA COMINGGG"
+  img:img8,
+  title:"Engine Oil",
+  description:"Nulla vitae elit libero, a pharetra augue mollis interdum",
+  name:'Engineoil'
   },
   {
-    img:oil2,
-    title:"Brake1",
-    description:"Nulla vitae elit libero, a pharetra augue mollis interdum.HEHHEHEHEHH HOOOOOO SANTAAAA COMINGGG"
+    img:img10,
+    title:"Brakes & clutch oil",
+    description:"Nulla vitae elit libero, a pharetra augue mollis interdum.",
+    name:'Brakes'
   },
   {
-    img:oil3,
-    title:"Brake2",
-    description:"Nulla vitae elit libero, a pharetra augue mollis interdum.WOHAOOO ollaollalolaollaolaoolaoal evil laugh I m the mannnn"
+    img:img3,
+    title:"Coolants",
+    description:"Nulla vitae elit libero, a pharetra augue mollis interdum.",
+    name:'Coolants'
   },
   {
-    img:oil1,
-    title:"Brake3",
-    description:"Nulla vitae elit libero, a pharetra augue mollis interdum.WOHAOOO ollaollalolaollaolaoolaoal evil laugh I m the mannnn"
+    img:img4,
+    title:"Grease",
+    description:"Nulla vitae elit libero, a pharetra augue mollis interdum.",
+    name:'Grease'
   },
   {
-    img:oil2,
-    title:"Brake4",
-    description:"Nulla vitae elit libero, a pharetra augue mollis interdum.WOHAOOO ollaollalolaollaolaoolaoal evil laugh I m the mannnn"
+    img:img5,
+    title:"Gear oil",
+    description:"Nulla vitae elit libero, a pharetra augue mollis interdum.",
+    name:'Grease'
+  },
+  {
+    img:img6,
+    title:"Diesel Exhaust Fluid",
+    description:"Nulla vitae elit libero, a pharetra augue mollis interdum.",
+    name:'Diesel'
   }
 ];
