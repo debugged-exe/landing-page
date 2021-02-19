@@ -44,7 +44,7 @@ function Product() {
                         </div>
                     </div>
                 </div>
-                
+
             </div>
         </section>);
 }
