@@ -1,21 +1,22 @@
 {
   "files": {
-    "main.css": "/landing-page/static/css/main.f2330e9c.chunk.css",
-    "main.js": "/landing-page/static/js/main.e3c59b8b.chunk.js",
-    "main.js.map": "/landing-page/static/js/main.e3c59b8b.chunk.js.map",
-    "runtime-main.js": "/landing-page/static/js/runtime-main.7430e9c8.js",
-    "runtime-main.js.map": "/landing-page/static/js/runtime-main.7430e9c8.js.map",
-    "static/css/2.c054e0fd.chunk.css": "/landing-page/static/css/2.c054e0fd.chunk.css",
-    "static/js/2.f448eebe.chunk.js": "/landing-page/static/js/2.f448eebe.chunk.js",
-    "static/js/2.f448eebe.chunk.js.map": "/landing-page/static/js/2.f448eebe.chunk.js.map",
-    "static/js/3.1d1aea41.chunk.js": "/landing-page/static/js/3.1d1aea41.chunk.js",
-    "static/js/3.1d1aea41.chunk.js.map": "/landing-page/static/js/3.1d1aea41.chunk.js.map",
+    "main.css": "/landing-page/static/css/main.59bd80d4.chunk.css",
+    "main.js": "/landing-page/static/js/main.720e87e7.chunk.js",
+    "main.js.map": "/landing-page/static/js/main.720e87e7.chunk.js.map",
+    "runtime-main.js": "/landing-page/static/js/runtime-main.1778fb81.js",
+    "runtime-main.js.map": "/landing-page/static/js/runtime-main.1778fb81.js.map",
+    "static/css/2.9d738e68.chunk.css": "/landing-page/static/css/2.9d738e68.chunk.css",
+    "static/js/2.18b37220.chunk.js": "/landing-page/static/js/2.18b37220.chunk.js",
+    "static/js/2.18b37220.chunk.js.map": "/landing-page/static/js/2.18b37220.chunk.js.map",
+    "static/js/3.5f7c56bc.chunk.js": "/landing-page/static/js/3.5f7c56bc.chunk.js",
+    "static/js/3.5f7c56bc.chunk.js.map": "/landing-page/static/js/3.5f7c56bc.chunk.js.map",
     "index.html": "/landing-page/index.html",
-    "static/css/2.c054e0fd.chunk.css.map": "/landing-page/static/css/2.c054e0fd.chunk.css.map",
-    "static/css/main.f2330e9c.chunk.css.map": "/landing-page/static/css/main.f2330e9c.chunk.css.map",
-    "static/js/2.f448eebe.chunk.js.LICENSE.txt": "/landing-page/static/js/2.f448eebe.chunk.js.LICENSE.txt",
+    "static/css/2.9d738e68.chunk.css.map": "/landing-page/static/css/2.9d738e68.chunk.css.map",
+    "static/css/main.59bd80d4.chunk.css.map": "/landing-page/static/css/main.59bd80d4.chunk.css.map",
+    "static/js/2.18b37220.chunk.js.LICENSE.txt": "/landing-page/static/js/2.18b37220.chunk.js.LICENSE.txt",
     "static/media/HomeLanding.css": "/landing-page/static/media/1.17c297e8.jpeg",
     "static/media/OurCompany.css": "/landing-page/static/media/2.996ab4fd.jpeg",
+    "static/media/Oilcard.css": "/landing-page/static/media/background.87872d50.jpg",
     "static/media/grease1.3c4f8eab.jpeg": "/landing-page/static/media/grease1.3c4f8eab.jpeg",
     "static/media/grease10.7f1e9a5b.jpeg": "/landing-page/static/media/grease10.7f1e9a5b.jpeg",
     "static/media/grease2.5267e53a.jpeg": "/landing-page/static/media/grease2.5267e53a.jpeg",
@@ -31,16 +32,13 @@
     "static/media/img7.e193bf9f.jpeg": "/landing-page/static/media/img7.e193bf9f.jpeg",
     "static/media/img8.05e08cb0.jpeg": "/landing-page/static/media/img8.05e08cb0.jpeg",
     "static/media/img9.07b75579.jpeg": "/landing-page/static/media/img9.07b75579.jpeg",
-    "static/media/oil1.8c53b98d.jpeg": "/landing-page/static/media/oil1.8c53b98d.jpeg",
-    "static/media/oil2.9841c49a.jpeg": "/landing-page/static/media/oil2.9841c49a.jpeg",
-    "static/media/oil3.6d4aaa02.jpeg": "/landing-page/static/media/oil3.6d4aaa02.jpeg",
-    "static/media/styles.css": "/landing-page/static/media/revicons.e8746a62.woff"
+    "static/media/tata.209655f4.png": "/landing-page/static/media/tata.209655f4.png"
   },
   "entrypoints": [
-    "static/js/runtime-main.7430e9c8.js",
-    "static/css/2.c054e0fd.chunk.css",
-    "static/js/2.f448eebe.chunk.js",
-    "static/css/main.f2330e9c.chunk.css",
-    "static/js/main.e3c59b8b.chunk.js"
+    "static/js/runtime-main.1778fb81.js",
+    "static/css/2.9d738e68.chunk.css",
+    "static/js/2.18b37220.chunk.js",
+    "static/css/main.59bd80d4.chunk.css",
+    "static/js/main.720e87e7.chunk.js"
   ]
 }
