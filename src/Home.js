@@ -5,6 +5,7 @@ import OurCompany from './Components/OurCompany/OurCompany';
 import Contact from './Components/Contact/Contact';
 import Product from './Components/Products/product';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import CompaniesWorkWith from './Components/CompaniesWorkWith/CompaniesWorkWith';
 
 function Home() {
   
@@ -12,6 +13,7 @@ function Home() {
   return (
     <div>
       <HomeLanding/>
+      <CompaniesWorkWith/>
       <Product/>
       <OurCompany/>
       <Contact/>
