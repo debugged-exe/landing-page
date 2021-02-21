@@ -14,12 +14,12 @@ const CompaniesListing = CompaniesList;
 
 const CompaniesWorkWith = () => {
     return(
-        <div style={{backgroundColor:'#15102e'}}>
+        <div style={{backgroundColor:'#15102e'}} className='flex items-center'>
         <Carousel style={{paddingTop:'40px',paddingBottom:'40px'}} autoPlaySpeed='2000' enableAutoPlay='true' breakPoints={breakPoints}>
             {
                 CompaniesListing.map(
                     company => 
-                    <img key={company.id} style={{height:'160px',width:'160px'}} alt={company.alt} src={company.imgUrl} />
+                    <p key={company.id} className='f1 white'>{company.alt}</p>
                 )
             }
         </Carousel>
