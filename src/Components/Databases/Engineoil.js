@@ -1,12 +1,9 @@
 import img1 from '../../Container/Images/engineOil/img1.jpeg'
 import img2 from '../../Container/Images/engineOil/img2.jpeg'
 import img3 from '../../Container/Images/engineOil/img3.jpeg'
-import img4 from '../../Container/Images/engineOil/img4.jpeg'
 import img5 from '../../Container/Images/engineOil/img5.jpeg'
 import img6 from '../../Container/Images/engineOil/img6.jpeg'
-import img7 from '../../Container/Images/engineOil/img7.jpeg'
 import img8 from '../../Container/Images/engineOil/img8.jpeg'
-import img9 from '../../Container/Images/engineOil/img9.jpeg'
 import img10 from '../../Container/Images/engineOil/img10.jpeg'
 
  const engineoil=[

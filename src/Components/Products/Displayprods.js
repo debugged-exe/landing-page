@@ -1,4 +1,4 @@
-import React,{useState} from 'react';
+import React from 'react';
 import 'tachyons';
 
 
@@ -17,7 +17,7 @@ const Displayprods=({products})=>  {
 							{data.items.map((sub)=>{
 								return(
                    <div className="ma4 shadow-2">
-									 <img src={sub.image} height='270' width='240'/>
+									 <img src={sub.image} height='270' alt='something' width='240'/>
 									 <h4 className="tc black ma3">{sub.name}</h4>
 									 </div>
 								 )

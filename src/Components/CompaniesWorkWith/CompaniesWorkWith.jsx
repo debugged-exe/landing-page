@@ -1,6 +1,5 @@
 import React from 'react';
 import  Carousel from 'react-elastic-carousel'; 
-import styled from 'styled-components';
 import CompaniesList from './CompaniesList';
 import './CompaniesWorkWith.css';
 
