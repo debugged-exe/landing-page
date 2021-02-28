@@ -3,7 +3,6 @@ import 'tachyons';
 import './Footer.css';
 import { ImWhatsapp } from 'react-icons/im';
 import { SiGmail } from 'react-icons/si';
-import { IoIosArrowDropleftCircle } from 'react-icons/io';
 import { Link } from 'react-router-dom';
 
 const Footer = () => {
