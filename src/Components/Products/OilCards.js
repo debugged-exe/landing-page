@@ -13,7 +13,7 @@ const OilCards = ({showProducts}) => {
       <div style={{paddingTop:70}}>
         <div className="backgroundimg">
            <h1 className="white tc pt4 pointer" style={{fontWeight:'bold'}}> Categories </h1>
-          <p className="f3 white tc fw5 pointer"  >Home -> <span style={{color:'#fa741b'}}> Categories</span></p>
+          <p className="f3 white tc fw5 pointer"  > <span style={{color:'#fa741b'}}> Categories</span></p>
 				</div>
 				  <h1 className="tc fw5"> Products </h1>
 					<p className="tc f4 line" style={{color:'#585a59'}}> We deal in Castrol, Valvoline, Tata Motors, TVS and other best quality lubricants available in Indian Market.</p>
