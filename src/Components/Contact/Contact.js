@@ -82,7 +82,7 @@ const Contact = () => {
     const [captchaFlag, setCaptchaFlag] = useState(false);
     const [captchaErr, setCaptchaErr] = useState("");
     const recaptchaRef = React.useRef();
-    const apiKey = '6Le_8hwaAAAAAB8uogu4yTVNyZaJw9265yzaUYUb';
+    const apiKey = '6LcPDG4aAAAAAJxf4pdhmlqnUl3jcYT4S-KU_lCQ';
 
     const captchaValidate = (event) => {
       const val = recaptchaRef.current.getValue()

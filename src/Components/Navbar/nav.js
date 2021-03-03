@@ -15,10 +15,10 @@ function nav() {
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="mr-auto Navbar-text-color">
-            <Link to='/' style={{ textDecoration: 'none' }}><span className="NavbarItem">Home</span></Link>
-            <Link to='/#about' style={{ textDecoration: 'none' }}><span className="NavbarItem">About Us</span></Link>
-            <Link to="/#contact" style={{ textDecoration: 'none' }}><span className="NavbarItem">Contact Us</span></Link>
-            <Link to="/#ourservices" style={{ textDecoration: 'none' }}><span className="NavbarItem">Our Services</span></Link>
+            <Link to='/' style={{ textDecoration: 'none' }}><span className="NavbarItem ml3">Home</span></Link>
+            <Link to='/#about' style={{ textDecoration: 'none' }}><span className="NavbarItem ml3">About Us</span></Link>
+            <Link to="/#contact" style={{ textDecoration: 'none' }}><span className="NavbarItem ml3">Contact Us</span></Link>
+            <Link to="/#ourservices" style={{ textDecoration: 'none' }}><span className="NavbarItem ml3">Our Services</span></Link>
           </Nav>
         </Navbar.Collapse>
       </Navbar>
