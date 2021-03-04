@@ -3,8 +3,8 @@ import './HomeLanding.css';
 
 const HomeLanding = () => {
     return (
-        <div className="homeImg">
-            <div data-aos='fade-down' className='center f1 b white text ml2'>
+        <div id='home' className="homeImg">
+            <div data-aos='fade-down' className='center f1 b white text'>
                 AUTOMOTIVE PARTS AND ACCESSORIES
             </div>
         </div>

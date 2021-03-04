@@ -9,13 +9,13 @@ const OilCards = ({showProducts}) => {
   const[items,setItems]=useState(ProdutsContent);
 
     return (
-      <>
+      <div id='pro'>
       <div style={{paddingTop:70}}>
-        <div className="backgroundimg">
+        <div className="backgroundimg flex justify-center items-center flex-column">
            <h1 className="white tc pt4 pointer" style={{fontWeight:'bold'}}> Categories </h1>
           <p className="f3 white tc fw5 pointer"  > <span style={{color:'#fa741b'}}> Categories</span></p>
 				</div>
-				  <h1 className="tc fw5"> Products </h1>
+				  <h1 className="tc fw5 mt3"> Products </h1>
 					<p className="tc f4 line" style={{color:'#585a59'}}> We deal in Castrol, Valvoline, Tata Motors, TVS and other best quality lubricants available in Indian Market.</p>
 
 				<div className="flex flex-wrap">
@@ -39,7 +39,7 @@ const OilCards = ({showProducts}) => {
           }
 				</div>
 		  </div>
-</>
+</div>
 );
 }
 

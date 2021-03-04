@@ -14,7 +14,7 @@ const CompaniesListing = CompaniesList;
 
 const CompaniesWorkWith = () => {
     return(
-        <div className='flex items-center justify-center back-ground'>
+        <div className='flex items-center justify-center back-ground mt4'>
         <Carousel style={{paddingTop:'40px',paddingBottom:'40px'}} autoPlaySpeed='2000' enableAutoPlay='true' breakPoints={breakPoints}>
             {
                 CompaniesListing.map(

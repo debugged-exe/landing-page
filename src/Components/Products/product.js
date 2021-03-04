@@ -1,9 +1,9 @@
 import React, { useEffect } from 'react';
 import Aos from 'aos';
+import {HashLink as Link} from 'react-router-hash-link';
 import 'aos/dist/aos.css';
 import { } from 'react-bootstrap';
 import './product.css'
-import { Link } from 'react-router-dom';
 
 function Product() {
     useEffect(() => {
@@ -38,7 +38,7 @@ function Product() {
                             <p className="card-text tc">
                                 We deal in Castrol, Valvoline, Tata Motors, TVS and other best quality lubricants available in Indian Market.
                             </p>
-                            <Link to="/products" style={{ textDecoration: 'none',backgroundColor:'#fa741b', color:'white'}} className='br2 b pa2 grow'>
+                            <Link to="/products/#pro" style={{ textDecoration: 'none',backgroundColor:'#fa741b', color:'white'}} className='br2 b pa2 grow'>
                                 View All Products
                             </Link>
                         </div>
