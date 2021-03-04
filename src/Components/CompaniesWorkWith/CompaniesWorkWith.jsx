@@ -6,8 +6,8 @@ import './CompaniesWorkWith.css';
 const breakPoints = [
     { width : 1, itemsToShow : 1, itemsToScroll:1,showArrows:false},
     { width : 550, itemsToShow : 2, itemsToScroll:1,showArrows:false},
-    { width : 760, itemsToShow : 3, itemsToScroll:1,showArrows:false},
-    { width : 1200, itemsToShow : 4, itemsToScroll:1,showArrows:false},
+    { width : 760, itemsToShow : 3, itemsToScroll:3,showArrows:false},
+    { width : 1200, itemsToShow : 4, itemsToScroll:4,showArrows:false},
 ]
 
 const CompaniesListing = CompaniesList;
