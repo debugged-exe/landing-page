@@ -216,6 +216,7 @@ const Contact = () => {
                 <p className='f2 ma0 b'>Address</p>
                 <p>NEAR  MRC GODOWN, OPP.</p> 
                 <p>SBI BANK, UBALE NAGAR,</p>
+                <p>Pune, Maharashtra</p>
                 <p className='f2 ma0 b'>Contact Details</p>
                 <p><span className='b'>MOB : </span>9822823513, 7620858694</p>
                 <p><span className='b'>E-Mail : </span>boraautomobiles99@gmail.com</p>
